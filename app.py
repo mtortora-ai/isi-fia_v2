@@ -6,7 +6,7 @@ app = Flask(__name__)
 model = pickle.load(open('models/tree-model.pkl', 'rb'))
 
 
-@app.route('/api/', methods=['POST'])
+@app.route('/', methods=['POST'])
 def predict():
     post_data = request.get_json()
     # Use of meta data keys e.g. post_data['date start']
